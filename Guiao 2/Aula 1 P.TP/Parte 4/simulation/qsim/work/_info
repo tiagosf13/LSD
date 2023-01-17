@@ -1,0 +1,191 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/dpedr/Desktop/Uni/2_semestre/LSD/Guiao2_Parte4/simulation/qsim
+Epenc16_4
+Z1 w1648133080
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
+!i122 2
+R0
+Z8 8PEnc4_2Demo.vho
+Z9 FPEnc4_2Demo.vho
+l0
+Z10 L35 1
+VHZG0`7<?F8:_^MbgE]D5m3
+!s100 0OTmUmkB0Vl8Wgl@H@@dG1
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1648133084
+!i10b 1
+Z13 !s108 1648133084.000000
+Z14 !s90 -work|work|PEnc4_2Demo.vho|
+Z15 !s107 PEnc4_2Demo.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 penc16_4 0 22 HZG0`7<?F8:_^MbgE]D5m3
+!i122 2
+l96
+L42 585
+V_n41`oVb@OllJ>U:Sae6Z1
+!s100 RWb5WmM9ZCIA_e_AEU_dF2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Epenc16_4_vhd_vec_tst
+Z18 w1648133076
+R5
+R6
+!i122 3
+R0
+Z19 8PEnc16_4_waveform.vwf.vht
+Z20 FPEnc16_4_waveform.vwf.vht
+l0
+Z21 L32 1
+V^d>VA:1KI6ZL4;GokSMDz0
+!s100 iKOa6O232@Z9d<8@eV^?J2
+R11
+32
+Z22 !s110 1648133085
+!i10b 1
+Z23 !s108 1648133085.000000
+Z24 !s90 -work|work|PEnc16_4_waveform.vwf.vht|
+!s107 PEnc16_4_waveform.vwf.vht|
+!i113 1
+R16
+R17
+Apenc16_4_arch
+R5
+R6
+DEx4 work 20 penc16_4_vhd_vec_tst 0 22 ^d>VA:1KI6ZL4;GokSMDz0
+!i122 3
+l45
+L34 174
+VVf5>7MWC;40`K@^;7An@e1
+!s100 NbYkmZYddkC1lUGDQXDOJ0
+R11
+32
+R22
+!i10b 1
+R23
+R24
+Z25 !s107 PEnc16_4_waveform.vwf.vht|
+!i113 1
+R16
+R17
+Epenc4_2
+Z26 w1648131935
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 0
+R0
+R8
+R9
+l0
+R10
+V;H^:NOlRNFJ8D5^;KzJGV2
+!s100 ?dz]5[<WJ6hDX_QlkP3j@1
+R11
+32
+Z27 !s110 1648131940
+!i10b 1
+Z28 !s108 1648131940.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 penc4_2 0 22 ;H^:NOlRNFJ8D5^;KzJGV2
+!i122 0
+l66
+L42 157
+V_;_?BfY]1d]36edl;a]WS3
+!s100 E<FdOFcPo0<6>^@IKWUS53
+R11
+32
+R27
+!i10b 1
+R28
+R14
+R15
+!i113 1
+R16
+R17
+Epenc4_2_vhd_vec_tst
+Z29 w1648131931
+R5
+R6
+!i122 1
+R0
+Z30 8PEnc4_2_waveform.vwf.vht
+Z31 FPEnc4_2_waveform.vwf.vht
+l0
+R21
+VF1B9aLh@XS]jNbCPXWDKC3
+!s100 T4L>mF222jV0k3SHnoKY`2
+R11
+32
+Z32 !s110 1648131941
+!i10b 1
+Z33 !s108 1648131941.000000
+Z34 !s90 -work|work|PEnc4_2_waveform.vwf.vht|
+Z35 !s107 PEnc4_2_waveform.vwf.vht|
+!i113 1
+R16
+R17
+Apenc4_2_arch
+R5
+R6
+DEx4 work 19 penc4_2_vhd_vec_tst 0 22 F1B9aLh@XS]jNbCPXWDKC3
+!i122 1
+l45
+L34 70
+VBj@Yac3cJ3LAN@7JbhXFg0
+!s100 =JF]65i26kdU:Mo7V[;;^2
+R11
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R16
+R17

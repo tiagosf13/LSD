@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : -8.290
+TNS   : -23.985
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -6.660
+TNS   : -510.472
+
+Type  : Slow 1200mV 85C Model Setup 'MefSet:mef_set|current_state.S1'
+Slack : -4.427
+TNS   : -7.842
+
+Type  : Slow 1200mV 85C Model Setup 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : -2.288
+TNS   : -4.265
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -1.900
+TNS   : -1.900
+
+Type  : Slow 1200mV 85C Model Hold 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : 0.504
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : 0.748
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MefSet:mef_set|current_state.S1'
+Slack : 3.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -177.760
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : -0.877
+TNS   : -11.472
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MefSet:mef_set|current_state.S1'
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : -7.815
+TNS   : -22.216
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -6.082
+TNS   : -456.750
+
+Type  : Slow 1200mV 0C Model Setup 'MefSet:mef_set|current_state.S1'
+Slack : -3.905
+TNS   : -6.890
+
+Type  : Slow 1200mV 0C Model Setup 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : -2.056
+TNS   : -3.875
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -1.746
+TNS   : -1.746
+
+Type  : Slow 1200mV 0C Model Hold 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : 0.474
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MefSet:mef_set|current_state.S1'
+Slack : 3.024
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -177.760
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : -0.805
+TNS   : -9.629
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MefSet:mef_set|current_state.S1'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : -4.195
+TNS   : -11.769
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.971
+TNS   : -192.686
+
+Type  : Fast 1200mV 0C Model Setup 'MefSet:mef_set|current_state.S1'
+Slack : -1.774
+TNS   : -3.067
+
+Type  : Fast 1200mV 0C Model Setup 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : -0.589
+TNS   : -1.108
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -1.190
+TNS   : -1.190
+
+Type  : Fast 1200mV 0C Model Hold 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MefSet:mef_set|current_state.S1'
+Slack : 1.707
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -147.100
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Counter:counter_A_TieBreak|s_counter_out[0]'
+Slack : -0.209
+TNS   : -1.758
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MefJogoNormal:mef_jogo_normal|current_state.S0'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MefSet:mef_set|current_state.S1'
+Slack : 0.441
+TNS   : 0.000
+
+------------------------------------------------------------

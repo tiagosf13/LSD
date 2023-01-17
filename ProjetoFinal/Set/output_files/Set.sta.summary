@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.953
+TNS   : -243.479
+
+Type  : Slow 1200mV 85C Model Setup 'MefSet:mef_set|current_state.S1'
+Slack : -1.369
+TNS   : -2.563
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MefSet:mef_set|current_state.S1'
+Slack : 0.672
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -113.510
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MefSet:mef_set|current_state.S1'
+Slack : 0.463
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.542
+TNS   : -215.688
+
+Type  : Slow 1200mV 0C Model Setup 'MefSet:mef_set|current_state.S1'
+Slack : -1.150
+TNS   : -2.167
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MefSet:mef_set|current_state.S1'
+Slack : 0.618
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -113.510
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MefSet:mef_set|current_state.S1'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.430
+TNS   : -75.914
+
+Type  : Fast 1200mV 0C Model Setup 'MefSet:mef_set|current_state.S1'
+Slack : -0.212
+TNS   : -0.392
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MefSet:mef_set|current_state.S1'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -94.384
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MefSet:mef_set|current_state.S1'
+Slack : 0.356
+TNS   : 0.000
+
+------------------------------------------------------------

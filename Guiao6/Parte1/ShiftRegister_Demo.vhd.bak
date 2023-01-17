@@ -1,0 +1,26 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity ShiftRegister_Demo is
+	generic (size : positive := 8);
+	port(sin : in std_logic;
+		  clk : in std_logic;
+		  dataOut : out std_logic_vector((size-1) downto 0));
+end ShiftRegister_Demo;
+
+architecture Structural of ShiftRegister_Demo is
+	signal clk1Hz : std_logic_vector((n-1) downto 0);
+	begin
+		divisor : entity work.ClkDividerN(Behavioral)
+										generic map(divfactor => 50_000_000)
+										port map(clkIn => CLOCK_50,
+													clkOut => clk1Hz);
+		
+		registo : entity work.ShiftRegisterN(Behavioral)
+									generic map(size => 8)
+									port map(sin => SW(0),
+												clk => clk1Hz,
+												reset => reset,
+												dataOut => LEDR);
+end Structural;

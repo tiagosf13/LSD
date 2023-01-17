@@ -1,0 +1,35 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity JogoNormal is
+	
+	port( KEY : in std_logic_vector(2 downto 0);
+			CLOCK_50 : in std_logic;
+			HEX : out std_logic_vector(6 downto 0));
+
+end JogoNormal;
+
+architecture Behavioral of JogoNormal is
+
+begin
+	
+	CounterUp2 : entity work.CounterUp2(Behavioral)
+					 port map( clk => CLOCK_50,
+								  enable_counter => CounterEnable,
+								  pointA => KEY(3),
+								  pointB => KEY(0),
+								  countA => PointsA,
+								  countB => PointsB);
+							
+	PointsFSM : entity work.PointsFSM(MealyArch)
+					port map( PointsA => countA,
+								 PointsB => countB,
+								 clk => CLOCK_50,
+								 HexA_unit => HEX(6),
+								 HexA_dec => HEX(7),
+								 HexB_unit => HEX(4),
+								 HexB_dec => HEX(5),
+								 gamesA => HEX(1),
+								 gamesB => HEX(0),
+								 CounterEnable => enable_counter);
+end Behavioral;

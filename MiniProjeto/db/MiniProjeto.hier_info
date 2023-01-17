@@ -1,0 +1,140 @@
+|ShiftRegister
+CLOCK_50 => pulsegen:Pulse_Generator.clk
+SW[0] => shiftunit:ShiftRegister_Unit.sin
+SW[1] => shiftunit:ShiftRegister_Unit.dirLeft
+KEY[0] => debounceunit:Debouce_Key0.dirtyIn
+KEY[1] => debounceunit:Debouce_Key1.dirtyIn
+LEDR[0] << shiftunit:ShiftRegister_Unit.dataOut[0]
+LEDR[1] << shiftunit:ShiftRegister_Unit.dataOut[1]
+LEDR[2] << shiftunit:ShiftRegister_Unit.dataOut[2]
+LEDR[3] << shiftunit:ShiftRegister_Unit.dataOut[3]
+LEDR[4] << shiftunit:ShiftRegister_Unit.dataOut[4]
+LEDR[5] << shiftunit:ShiftRegister_Unit.dataOut[5]
+LEDR[6] << shiftunit:ShiftRegister_Unit.dataOut[6]
+LEDR[7] << shiftunit:ShiftRegister_Unit.dataOut[7]
+
+
+|ShiftRegister|DebounceUnit:Debouce_Key1
+refClk => s_pulsedOut.CLK
+refClk => s_debounceCnt[0].CLK
+refClk => s_debounceCnt[1].CLK
+refClk => s_debounceCnt[2].CLK
+refClk => s_debounceCnt[3].CLK
+refClk => s_debounceCnt[4].CLK
+refClk => s_debounceCnt[5].CLK
+refClk => s_debounceCnt[6].CLK
+refClk => s_debounceCnt[7].CLK
+refClk => s_debounceCnt[8].CLK
+refClk => s_debounceCnt[9].CLK
+refClk => s_debounceCnt[10].CLK
+refClk => s_debounceCnt[11].CLK
+refClk => s_debounceCnt[12].CLK
+refClk => s_debounceCnt[13].CLK
+refClk => s_debounceCnt[14].CLK
+refClk => s_debounceCnt[15].CLK
+refClk => s_debounceCnt[16].CLK
+refClk => s_debounceCnt[17].CLK
+refClk => s_debounceCnt[18].CLK
+refClk => s_debounceCnt[19].CLK
+refClk => s_debounceCnt[20].CLK
+refClk => s_debounceCnt[21].CLK
+refClk => s_debounceCnt[22].CLK
+refClk => s_previousIn.CLK
+refClk => s_dirtyIn.CLK
+dirtyIn => s_dirtyIn.DATAIN
+pulsedOut <= s_pulsedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRegister|DebounceUnit:Debouce_Key0
+refClk => s_pulsedOut.CLK
+refClk => s_debounceCnt[0].CLK
+refClk => s_debounceCnt[1].CLK
+refClk => s_debounceCnt[2].CLK
+refClk => s_debounceCnt[3].CLK
+refClk => s_debounceCnt[4].CLK
+refClk => s_debounceCnt[5].CLK
+refClk => s_debounceCnt[6].CLK
+refClk => s_debounceCnt[7].CLK
+refClk => s_debounceCnt[8].CLK
+refClk => s_debounceCnt[9].CLK
+refClk => s_debounceCnt[10].CLK
+refClk => s_debounceCnt[11].CLK
+refClk => s_debounceCnt[12].CLK
+refClk => s_debounceCnt[13].CLK
+refClk => s_debounceCnt[14].CLK
+refClk => s_debounceCnt[15].CLK
+refClk => s_debounceCnt[16].CLK
+refClk => s_debounceCnt[17].CLK
+refClk => s_debounceCnt[18].CLK
+refClk => s_debounceCnt[19].CLK
+refClk => s_debounceCnt[20].CLK
+refClk => s_debounceCnt[21].CLK
+refClk => s_debounceCnt[22].CLK
+refClk => s_previousIn.CLK
+refClk => s_dirtyIn.CLK
+dirtyIn => s_dirtyIn.DATAIN
+pulsedOut <= s_pulsedOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRegister|PulseGen:Pulse_Generator
+clk => pulse~reg0.CLK
+clk => s_counter[0].CLK
+clk => s_counter[1].CLK
+clk => s_counter[2].CLK
+clk => s_counter[3].CLK
+clk => s_counter[4].CLK
+clk => s_counter[5].CLK
+clk => s_counter[6].CLK
+clk => s_counter[7].CLK
+clk => s_counter[8].CLK
+clk => s_counter[9].CLK
+clk => s_counter[10].CLK
+clk => s_counter[11].CLK
+clk => s_counter[12].CLK
+clk => s_counter[13].CLK
+clk => s_counter[14].CLK
+clk => s_counter[15].CLK
+clk => s_counter[16].CLK
+clk => s_counter[17].CLK
+clk => s_counter[18].CLK
+clk => s_counter[19].CLK
+clk => s_counter[20].CLK
+clk => s_counter[21].CLK
+clk => s_counter[22].CLK
+clk => s_counter[23].CLK
+clk => s_counter[24].CLK
+clk => s_counter[25].CLK
+reset => count_proc.IN1
+pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRegister|ShiftUnit:ShiftRegister_Unit
+clk => s_shiftReg[0].CLK
+clk => s_shiftReg[1].CLK
+clk => s_shiftReg[2].CLK
+clk => s_shiftReg[3].CLK
+clk => s_shiftReg[4].CLK
+clk => s_shiftReg[5].CLK
+clk => s_shiftReg[6].CLK
+clk => s_shiftReg[7].CLK
+reset => ~NO_FANOUT~
+sin => s_shiftReg.DATAA
+sin => s_shiftReg.DATAB
+dirLeft => s_shiftReg.OUTPUTSELECT
+dirLeft => s_shiftReg.OUTPUTSELECT
+dirLeft => s_shiftReg.OUTPUTSELECT
+dirLeft => s_shiftReg.OUTPUTSELECT
+dirLeft => s_shiftReg.OUTPUTSELECT
+dirLeft => s_shiftReg.OUTPUTSELECT
+dirLeft => s_shiftReg.OUTPUTSELECT
+dirLeft => s_shiftReg.OUTPUTSELECT
+dataOut[0] <= s_shiftReg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= s_shiftReg[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= s_shiftReg[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= s_shiftReg[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= s_shiftReg[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= s_shiftReg[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= s_shiftReg[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= s_shiftReg[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

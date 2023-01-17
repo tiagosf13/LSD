@@ -1,0 +1,342 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Projeto/JogoNormal/simulation/qsim
+Ecounterup2
+Z1 w1654206070
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 10
+R0
+Z10 8PointsFSM.vho
+Z11 FPointsFSM.vho
+l0
+Z12 L37 1
+V<fi9h=nJU71k5Xh2;iMV<2
+!s100 d;X>BlL5GZQ?5OkAe<1:B0
+Z13 OV;C;2020.1;71
+32
+Z14 !s110 1654206071
+!i10b 1
+Z15 !s108 1654206071.000000
+Z16 !s90 -work|work|PointsFSM.vho|
+Z17 !s107 PointsFSM.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 counterup2 0 22 <fi9h=nJU71k5Xh2;iMV<2
+!i122 10
+l81
+L48 280
+VFG`X<Lk1`V=l`>>^oiIOJ1
+!s100 Q:V``Gf:YH@9hIg_95cgz3
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Ecounterup2_vhd_vec_tst
+R1
+R7
+R8
+!i122 11
+R0
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
+l0
+Z22 L32 1
+Vc7fn=0CW7hIJ?A_?MmmPD3
+!s100 lhLoKDl?iY[LeQ6lZ4a5H2
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -work|work|Waveform2.vwf.vht|
+Z24 !s107 Waveform2.vwf.vht|
+!i113 1
+R18
+R19
+Acounterup2_arch
+R7
+R8
+DEx4 work 22 counterup2_vhd_vec_tst 0 22 c7fn=0CW7hIJ?A_?MmmPD3
+!i122 11
+l53
+L34 128
+VQd=e<M0oiF`??Ol;i[LF11
+!s100 0be=3z<;GQhNkQPY>bZa93
+R13
+32
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 1
+R18
+R19
+Ehard_block
+Z25 w1655064315
+R4
+R2
+R6
+R7
+R8
+R3
+!i122 42
+Z26 dC:/Users/Tiago/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Projeto/JogoNormal/simulation/qsim
+R10
+R11
+l0
+L35 1
+VB]0;STalBkCB1_B4BXQDW2
+!s100 >mXi5[`cD`bFC`UBKA<om3
+R13
+32
+Z27 !s110 1655064317
+!i10b 1
+Z28 !s108 1655064317.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
+!i122 42
+l65
+L51 20
+Via>5o7W??azG@W@@eFOTF0
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R13
+32
+R27
+!i10b 1
+R28
+R16
+R17
+!i113 1
+R18
+R19
+Ejogonormal
+R25
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+!i122 42
+R26
+R10
+R11
+l0
+L80 1
+VRHC78j3GeM1hSXY9gce@f2
+!s100 fCb1Z^4U^XChkdhPAPL8O0
+R13
+32
+R27
+!i10b 1
+R28
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 jogonormal 0 22 RHC78j3GeM1hSXY9gce@f2
+!i122 42
+l307
+L159 2052
+VT?2ELdY;WE=ESX=i9@_K11
+!s100 9Ko^]>^V7D_MY><P2POc12
+R13
+32
+R27
+!i10b 1
+R28
+R16
+R17
+!i113 1
+R18
+R19
+Ejogonormal_vhd_vec_tst
+Z29 w1655064313
+R7
+R8
+!i122 43
+R26
+Z30 8Waveform5.vwf.vht
+Z31 FWaveform5.vwf.vht
+l0
+R22
+VMGM@2dI?<KAhmE`VjU0[c1
+!s100 ]907An0mhWM7J3KhRfSSY0
+R13
+32
+R27
+!i10b 1
+R28
+Z32 !s90 -work|work|Waveform5.vwf.vht|
+Z33 !s107 Waveform5.vwf.vht|
+!i113 1
+R18
+R19
+Ajogonormal_arch
+R7
+R8
+Z34 DEx4 work 22 jogonormal_vhd_vec_tst 0 22 MGM@2dI?<KAhmE`VjU0[c1
+!i122 43
+l61
+Z35 L34 241
+Z36 VZWCQBYXgKo:bh[i8l=Y3J2
+Z37 !s100 PiLhDY1Qm?b`E;OYk^fYz0
+R13
+32
+R27
+!i10b 1
+R28
+R32
+R33
+!i113 1
+R18
+R19
+Epointsfsm
+Z38 w1655045399
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+!i122 16
+R26
+R10
+R11
+l0
+R12
+VYoBha2VaOd@DI@Cda8O;H1
+!s100 2U_Z32oa<3<Mi>V2JknWX2
+R13
+32
+Z39 !s110 1655045401
+!i10b 1
+Z40 !s108 1655045401.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 9 pointsfsm 0 22 YoBha2VaOd@DI@Cda8O;H1
+!i122 16
+l156
+L52 1215
+Vhf;ejmDf2N4mOejh2RYY11
+!s100 1DjiK<MRd7U6NozEf3lni0
+R13
+32
+R39
+!i10b 1
+R40
+R16
+R17
+!i113 1
+R18
+R19
+Epointsfsm_vhd_vec_tst
+Z41 w1655045398
+R7
+R8
+!i122 17
+R26
+Z42 8Waveform3.vwf.vht
+Z43 FWaveform3.vwf.vht
+l0
+R22
+VfI6e:B@_VTL07OC_B7i370
+!s100 DGTV@6ZhjNg3[eii_c5z90
+R13
+32
+R39
+!i10b 1
+R40
+Z44 !s90 -work|work|Waveform3.vwf.vht|
+Z45 !s107 Waveform3.vwf.vht|
+!i113 1
+R18
+R19
+Apointsfsm_arch
+R7
+R8
+DEx4 work 21 pointsfsm_vhd_vec_tst 0 22 fI6e:B@_VTL07OC_B7i370
+!i122 17
+l61
+L34 466
+V@FzFJ`ec]Se>13^cW0I>o2
+!s100 HX_;1^L8YO2e`jeW4FWIj2
+R13
+32
+R39
+!i10b 1
+R40
+R44
+R45
+!i113 1
+R18
+R19

@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/simulation/modelsim
+Epointsfsm
+Z1 w1654199480
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z4 8C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Projeto/JogoNormal/PointsFSM.vhd
+Z5 FC:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Projeto/JogoNormal/PointsFSM.vhd
+l0
+L4 1
+VBBQSb]AhM]g?g31ib>fo61
+!s100 IKlYm;;]9QAhB3U?jkZ=[0
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1654200873
+!i10b 1
+Z8 !s108 1654200873.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Projeto/JogoNormal/PointsFSM.vhd|
+Z10 !s107 C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Projeto/JogoNormal/PointsFSM.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Amealyarch
+R2
+R3
+Z13 DEx4 work 9 pointsfsm 0 22 BBQSb]AhM]g?g31ib>fo61
+!i122 3
+l15
+Z14 L10 48
+Z15 VU4a^^IkSZ1J=NJmiS?XOa1
+Z16 !s100 88K^G==Y=kQYD<0lHgE;a2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eseqdetector
+w1654167368
+R2
+R3
+!i122 1
+R0
+8C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetector.vhd
+FC:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetector.vhd
+l0
+L4 1
+VCEKVU>k<F;?HdQabRQQ9k0
+!s100 IAfOo:OY3XkNkW<iC]mSk1
+R6
+31
+Z17 !s110 1654200493
+!i10b 1
+Z18 !s108 1654200493.000000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetector.vhd|
+!s107 C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetector.vhd|
+!i113 1
+Z19 o-93 -work work
+R12
+Eseqdetfsm
+Z20 w1654167366
+R2
+R3
+!i122 0
+R0
+Z21 8C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetFSM.vhd
+Z22 FC:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetFSM.vhd
+l0
+L4 1
+V]o=5R_3aJ7X6BSDe=:SUn0
+!s100 `2If:@4`h^75cDbWjI@B]2
+R6
+31
+R17
+!i10b 1
+R18
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetFSM.vhd|
+Z24 !s107 C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/Guiao9/Parte1/SeqDetFSM.vhd|
+!i113 1
+R19
+R12
+Amealyarch
+R2
+R3
+DEx4 work 9 seqdetfsm 0 22 ]o=5R_3aJ7X6BSDe=:SUn0
+!i122 0
+l15
+L10 54
+VUZG5:X^ZXai9b@I`4:X6]2
+!s100 _a54g?S0K4:J>bVmS`L<R0
+R6
+31
+R17
+!i10b 1
+R18
+R23
+R24
+!i113 1
+R19
+R12

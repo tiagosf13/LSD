@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : -4.950
+TNS   : -11.696
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -4.189
+TNS   : -67.503
+
+Type  : Slow 1200mV 85C Model Setup 'FreqDiv:FreqDiv|clkOut'
+Slack : -3.814
+TNS   : -11.772
+
+Type  : Slow 1200mV 85C Model Hold 'FreqDiv:FreqDiv|clkOut'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.643
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : 0.761
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FreqDiv:FreqDiv|clkOut'
+Slack : -1.285
+TNS   : -11.565
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : -4.695
+TNS   : -10.989
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.840
+TNS   : -58.133
+
+Type  : Slow 1200mV 0C Model Setup 'FreqDiv:FreqDiv|clkOut'
+Slack : -3.285
+TNS   : -9.672
+
+Type  : Slow 1200mV 0C Model Hold 'FreqDiv:FreqDiv|clkOut'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.587
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : 0.824
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FreqDiv:FreqDiv|clkOut'
+Slack : -1.285
+TNS   : -11.565
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : -2.239
+TNS   : -4.992
+
+Type  : Fast 1200mV 0C Model Setup 'FreqDiv:FreqDiv|clkOut'
+Slack : -1.849
+TNS   : -4.929
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.607
+TNS   : -17.511
+
+Type  : Fast 1200mV 0C Model Hold 'FreqDiv:FreqDiv|clkOut'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -36.930
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FreqDiv:FreqDiv|clkOut'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CounterUp2:CounterUp2|s_countA[0]'
+Slack : 0.222
+TNS   : 0.000
+
+------------------------------------------------------------

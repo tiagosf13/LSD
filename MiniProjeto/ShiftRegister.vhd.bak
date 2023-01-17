@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity ShiftRegister is
+	port(CLOCK_50 : in  std_logic;
+		  SW : in  std_logic_vector(1 downto 0);
+		  KEY : in std_logic_vector(1 downto 0);
+		  LEDR : out std_logic_vector);
+end ShiftRegister;
+
+architecture Implementation of ShifRegister is
+
+	signal s_DebouncedKey0, s_pulse : std_logic;
+	signal s_dataOut : std_logic_vector(7 downto 0);
+
+begin
+
+		Debouce_Key0 : entity work.DebounceUnit(Behavioral)
+							port map(refClk => CLOCK_50,
+										dirtyIn => KEY1(1),
+										pulsedOut => s_DebouncedKey0);
+	
+		Pulse_Generator : entity work.PulseGen(Behavioral)
+								port map(clk => CLOCK_50,
+											reset => s_DebouncedKey0,
+											pulse => s_pulse);
+										
+		ShiftRegister_Unit : entity work.ShiftUnit(Behavioral)
+									port map(clk => s_pulse,
+												dataIn =>
+												sin => SW(0),
+												dirLeft => SW(1));

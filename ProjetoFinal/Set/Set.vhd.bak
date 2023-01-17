@@ -1,0 +1,47 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Set is
+	port(CLOCK_50 : in  std_logic;
+		  s_gamewinner_A_jogo_normal : in std_logic;
+		  s_gamewinner_A_tiebreak : in std_logic;
+		  s_gamewinner_B_jogo_normal : in std_logic;
+		  s_gamewinner_B_tiebreak : in std_logic;
+		  KEY : in  std_logic_vector(3 downto 0);
+		  HEX0 : out std_logic_vector(6 downto 0);
+		  HEX1 : out std_logic_vector(6 downto 0));
+end Set;
+
+architecture Implementation of MarcadorTenis is
+	signal s_counter_reset_set  : std_logic := '0';
+	signal s_gamewinner_B_jogo_normal, s_gamewinner_A_jogo_normal, s_gamewinner_B_tiebreak, s_gamewinner_A_tiebreak, s_setwinner_B, s_setwinner_A, s_enable_tiebreak : std_logic;
+	signal counter_outB_set, counter_outA_set : std_logic_vector(3 downto 0);
+begin
+
+	counter_B_Set : entity work.Counter(Behavioral) --contador dos pontos do jogador A, ligado ao bloco game
+						 port map(clk => CLOCK_50,
+									 enable => s_gamewinner_B_jogo_normal or s_gamewinner_B_tiebreak,
+									 reset => s_counter_reset_set,
+									 counter_out => counter_outB_set);
+							
+	counter_A_Set : entity work.Counter(Behavioral) --contador dos pontos do jogador A, ligado ao bloco game
+						 port map(clk => CLOCK_50,
+									 enable => s_gamewinner_A_jogo_normal or s_gamewinner_A_tiebreak,
+									 reset => s_counter_reset_set,
+								 	 counter_out => counter_outA_set);
+							
+	mef_set : entity work.MefSet(MealyArch) --mef para o jogo set
+				 port map(clock => CLOCK_50,
+							 counter_B => counter_outB_set,
+							 counter_A => counter_outA_set,
+							 counter_reset => s_counter_reset_set,
+							 enable_tiebreak => s_enable_tiebreak,
+							 set_winnerB => s_setwinner_B,
+							 set_winnerA => s_setwinner_A);
+						
+	hex_display_set : entity work.ShowHex_Set(Behavioral) -- saida para os displays hexadecimais
+							port map(enable => '1',
+										countPlayerB => counter_outB_set,
+										countPlayerA => counter_outA_set,
+										decOutB => HEX0,
+										decOutA => HEX1);

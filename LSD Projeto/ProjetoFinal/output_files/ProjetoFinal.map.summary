@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jun 14 17:58:04 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ProjetoFinal
+Top-level Entity Name : ProjetoFinal
+Family : Cyclone IV E
+Total logic elements : 602
+    Total combinational functions : 596
+    Dedicated logic registers : 179
+Total registers : 179
+Total pins : 87
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

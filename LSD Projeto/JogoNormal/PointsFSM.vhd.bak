@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity PointsFSM is
+	port( Xin : in std_logic;
+			clk : in std_logic;
+			Yout : out std_logic);
+end PointsFSM;

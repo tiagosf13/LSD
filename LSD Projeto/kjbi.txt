@@ -1,0 +1,121 @@
+begin 
+	sync_proc : process(clock)
+	begin
+		if (rising_edge(clock)) then
+			current_state <= next_state;
+		end if;
+	end process;
+	
+	comb_proc : process(current_state, counter_A, counter_B)
+	
+	begin
+		enable_tiebreak <= '0';
+		counter_reset <= '0';
+		case(current_state) is
+		
+		when S0 =>
+			if (counter_A = "0111" and counter_B < "0011") then --se o jogador A chegar a 6 jogos e o jogador B tiver menos de 5 jogos
+				next_state <= S2;
+			elsif (counter_B = "0111" and counter_A < "0011") then --se o jogador B chegar a 6 jogos e o jogador A tiver menos de 5 jogos
+				next_state <= S2;
+			elsif (counter_A = "1000" and counter_B < "0111") then --se o jogador A chegar a 7 jogos e o jogador B tiver menos de 6 jogos
+				next_state <= S2;
+			elsif (counter_B = "1000" and counter_A < "0111") then --se o jogador B chegar a 7 jogos e o jogador A tiver menos de 6 jogos
+				next_state <= S2;
+			elsif (counter_B = "0111" and counter_A = "0111") then --se o jogador B chegar a 6 jogos e o jogador A chegar a 6 jogos, vamos a tiebreak
+				next_state <= S1;
+				enable_tiebreak <= '1';
+			else
+				next_state <= S0;
+			end if;
+		when S1 => --empate
+			if (counter_A = "1000") then --counter_A > counter_B
+				next_state <= S2;
+			elsif (counter_B = "1000") then --counter_B > counter_A
+				next_state <= S2;
+			else
+				next_state <= S1;
+			end if;
+		when S2 => --vitoria
+			next_state <= S0;
+			counter_reset <= '1';
+			enable_tiebreak <= '0';
+			
+			if (counter_A > counter_B) then
+				set_winnerA <= '1';
+				set_winnerB <= '0';
+			else
+				set_winnerA <= '0';
+				set_winnerB <= '1';
+			end if;
+		end case;
+	end process;
+end MealyArch;
+
+
+begin 
+	sync_proc : process(clock)
+	begin
+		if (rising_edge(clock)) then
+			current_State <= next_state;
+		end if;
+	end process;
+	
+	comb_proc : process(current_state, counter_A, counter_B)
+	
+	begin
+		counter_reset <= '0';
+		set_winnerA <= '0';
+		set_winnerB <= '0';
+		enable_tiebreak <= '0';
+
+		case (current_state) is
+		when E0 =>
+			if (counter_A = "110" and counter_B = "110") then
+				-- empate a 6 jogos entre os dois jogadores
+				next_state <= E1;
+				enable_tiebreak <= '1';
+			elsif ((counter_A = "110" and counter_B /= "101") or (counter_A = "111" and counter_B /= "110")) then
+				-- set ganho pelo jogador A (por vantagem --> jogador A com 6 jogos ganhos e o B com menos de 5
+				--                                            ou jogador A com 7 jogos ganhos e o B com menos de 6)
+				set_winnerA <= '1';
+				next_state <= E2;
+			elsif ((counter_B = "110" and counter_A /= "101") or (counter_B = "111" and counter_A /= "110")) then
+				-- set ganho pelo jogador B (por vantagem --> jogador B com 6 jogos ganhos e o A com menos de 5
+				--                                            ou jogador B com 7 jogos ganhos e o A com menos de 6)
+				set_winnerB <= '1';
+				next_state <= E2;
+			else
+				next_state <= E0;
+			end if;
+ 
+		when E1 =>
+			if (counter_A = "111") then
+				-- jogador A ganhou o set e o game
+				set_winnerA <= '1';
+				enable_tiebreak <= '1';
+				next_state <= E3;
+			elsif (counter_B = "111") then
+				-- jogador B ganhou o set e o game
+				set_winnerB <= '1';
+				enable_tiebreak <= '1';
+				next_state <= E3;
+			else
+				enable_tiebreak <= '1';
+				next_state <= E1;
+			end if;
+
+		when E2 =>
+			-- terminar o set sem 'tie mode'
+
+			next_state <= E0;
+		when E3 =>
+			-- terminar o jogo em 'tie mode'
+			next_state <= E0;
+			enable_tiebreak <= '1';
+		
+		when others =>
+			next_state <= E0;
+		end case;
+	end process;
+end MealyArch;

@@ -1,0 +1,399 @@
+Analysis & Synthesis report for GameNormal
+Wed Jun 15 08:51:14 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |GameNormal|MefJogoNormal:mef_jogo_normal|current_state
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Debouncer:Debouncer_PointsB
+ 12. Parameter Settings for User Entity Instance: Debouncer:Debouncer_PointsA
+ 13. Port Connectivity Checks: "ShowHex:to_hex_display"
+ 14. Port Connectivity Checks: "MefJogoNormal:mef_jogo_normal"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 15 08:51:14 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; GameNormal                                  ;
+; Top-level Entity Name              ; GameNormal                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 200                                         ;
+;     Total combinational functions  ; 196                                         ;
+;     Dedicated logic registers      ; 61                                          ;
+; Total registers                    ; 61                                          ;
+; Total pins                         ; 33                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; GameNormal         ; GameNormal         ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; Counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/Counter.vhd       ;         ;
+; GameNormal.vhd                   ; yes             ; User VHDL File  ; C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd    ;         ;
+; Debouncer.vhd                    ; yes             ; User VHDL File  ; C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/Debouncer.vhd     ;         ;
+; MefJogoNormal.vhd                ; yes             ; User VHDL File  ; C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/MefJogoNormal.vhd ;         ;
+; ShowHex.vhd                      ; yes             ; User VHDL File  ; C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/ShowHex.vhd       ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 200            ;
+;                                             ;                ;
+; Total combinational functions               ; 196            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 89             ;
+;     -- 3 input functions                    ; 33             ;
+;     -- <=2 input functions                  ; 74             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 154            ;
+;     -- arithmetic mode                      ; 42             ;
+;                                             ;                ;
+; Total registers                             ; 61             ;
+;     -- Dedicated logic registers            ; 61             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 33             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 61             ;
+; Total fan-out                               ; 818            ;
+; Average fan-out                             ; 2.53           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name   ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+---------------+--------------+
+; |GameNormal                        ; 196 (0)             ; 61 (0)                    ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |GameNormal                               ; GameNormal    ; work         ;
+;    |Counter:counter_A|             ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameNormal|Counter:counter_A             ; Counter       ; work         ;
+;    |Counter:counter_B|             ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameNormal|Counter:counter_B             ; Counter       ; work         ;
+;    |Debouncer:Debouncer_PointsA|   ; 64 (64)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameNormal|Debouncer:Debouncer_PointsA   ; Debouncer     ; work         ;
+;    |Debouncer:Debouncer_PointsB|   ; 64 (64)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameNormal|Debouncer:Debouncer_PointsB   ; Debouncer     ; work         ;
+;    |MefJogoNormal:mef_jogo_normal| ; 25 (25)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameNormal|MefJogoNormal:mef_jogo_normal ; MefJogoNormal ; work         ;
+;    |ShowHex:to_hex_display|        ; 35 (35)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameNormal|ShowHex:to_hex_display        ; ShowHex       ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |GameNormal|MefJogoNormal:mef_jogo_normal|current_state                                               ;
++--------------------+------------------+--------------------+--------------------+------------------+------------------+
+; Name               ; current_state.S3 ; current_state.S2_B ; current_state.S2_A ; current_state.S1 ; current_state.S0 ;
++--------------------+------------------+--------------------+--------------------+------------------+------------------+
+; current_state.S0   ; 0                ; 0                  ; 0                  ; 0                ; 0                ;
+; current_state.S1   ; 0                ; 0                  ; 0                  ; 1                ; 1                ;
+; current_state.S2_A ; 0                ; 0                  ; 1                  ; 0                ; 1                ;
+; current_state.S2_B ; 0                ; 1                  ; 0                  ; 0                ; 1                ;
+; current_state.S3   ; 1                ; 0                  ; 0                  ; 0                ; 1                ;
++--------------------+------------------+--------------------+--------------------+------------------+------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 61    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 5:1                ; 22 bits   ; 66 LEs        ; 44 LEs               ; 22 LEs                 ; Yes        ; |GameNormal|Debouncer:Debouncer_PointsB|s_debounceCnt[0] ;
+; 5:1                ; 22 bits   ; 66 LEs        ; 44 LEs               ; 22 LEs                 ; Yes        ; |GameNormal|Debouncer:Debouncer_PointsA|s_debounceCnt[8] ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |GameNormal|ShowHex:to_hex_display|UniOutB               ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |GameNormal|ShowHex:to_hex_display|UniOutA               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Debouncer:Debouncer_PointsB ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                  ;
+; msecmininwidth ; 50    ; Signed Integer                                  ;
+; inpolarity     ; '1'   ; Enumerated                                      ;
+; outpolarity    ; '0'   ; Enumerated                                      ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Debouncer:Debouncer_PointsA ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                  ;
+; msecmininwidth ; 50    ; Signed Integer                                  ;
+; inpolarity     ; '1'   ; Enumerated                                      ;
+; outpolarity    ; '0'   ; Enumerated                                      ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "ShowHex:to_hex_display" ;
++--------+-------+----------+------------------------+
+; Port   ; Type  ; Severity ; Details                ;
++--------+-------+----------+------------------------+
+; enable ; Input ; Info     ; Stuck at VCC           ;
++--------+-------+----------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MefJogoNormal:mef_jogo_normal"                                                        ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; win    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; winner ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 61                          ;
+;     ENA               ; 34                          ;
+;     plain             ; 27                          ;
+; cycloneiii_lcell_comb ; 197                         ;
+;     arith             ; 42                          ;
+;         2 data inputs ; 42                          ;
+;     normal            ; 155                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 89                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 4.31                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Jun 15 08:51:07 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GameNormal -c GameNormal
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
+    Info (12022): Found design unit 1: Counter-Behavioral File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/Counter.vhd Line: 12
+    Info (12023): Found entity 1: Counter File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/Counter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file gamenormal.vhd
+    Info (12022): Found design unit 1: GameNormal-Implementation File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 13
+    Info (12023): Found entity 1: GameNormal File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file debouncer.vhd
+    Info (12022): Found design unit 1: Debouncer-Behavioral File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/Debouncer.vhd Line: 15
+    Info (12023): Found entity 1: Debouncer File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/Debouncer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mefjogonormal.vhd
+    Info (12022): Found design unit 1: MefJogoNormal-MealyArch File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/MefJogoNormal.vhd Line: 14
+    Info (12023): Found entity 1: MefJogoNormal File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/MefJogoNormal.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file showhex.vhd
+    Info (12022): Found design unit 1: ShowHex-Behavioral File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/ShowHex.vhd Line: 15
+    Info (12023): Found entity 1: ShowHex File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/ShowHex.vhd Line: 4
+Info (12127): Elaborating entity "GameNormal" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at GameNormal.vhd(16): object "s_win" assigned a value but never read File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at GameNormal.vhd(17): object "s_winner" assigned a value but never read File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 17
+Info (12129): Elaborating entity "Debouncer" using architecture "A:behavioral" for hierarchy "Debouncer:Debouncer_PointsB" File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 24
+Info (12129): Elaborating entity "Counter" using architecture "A:behavioral" for hierarchy "Counter:counter_B" File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 42
+Info (12129): Elaborating entity "MefJogoNormal" using architecture "A:mealyarch" for hierarchy "MefJogoNormal:mef_jogo_normal" File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 54
+Info (12129): Elaborating entity "ShowHex" using architecture "A:behavioral" for hierarchy "ShowHex:to_hex_display" File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 63
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 6
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Tiago Fonseca/OneDrive - Universidade de Aveiro/Desktop/Tiago/LSD/ProjetoFinal/JogoNormal/GameNormal.vhd Line: 6
+Info (21057): Implemented 233 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 200 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Wed Jun 15 08:51:14 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
+
+

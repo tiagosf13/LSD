@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity GameNormal is
+	port(CLOCK_50 : in  std_logic;
+		  KEY      : in  std_logic_vector(3 downto 0);
+		  HEX4     : out std_logic_vector(6 downto 0);
+		  HEX5     : out std_logic_vector(6 downto 0);
+		  HEX6     : out std_logic_vector(6 downto 0);
+		  HEX7     : out std_logic_vector(6 downto 0));
+end GameNormal;

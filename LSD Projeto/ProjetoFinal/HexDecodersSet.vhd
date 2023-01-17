@@ -1,0 +1,80 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.all;
+
+entity HexDecodersSet is
+	port(enable         : in  std_logic;
+		  breakPointMode : in  std_logic;
+		  countPlayerA   : in  std_logic_vector(2 downto 0);
+		  countPlayerB   : in  std_logic_vector(2 downto 0);
+		  decOutA        : out std_logic_vector(6 downto 0);
+		  decOutB        : out std_logic_vector(6 downto 0);
+		  decOutTotal0   : out std_logic_vector(6 downto 0);
+		  decOutTotal1   : out std_logic_vector(6 downto 0));
+end HexDecodersSet;
+
+architecture Behavioral of HexDecodersSet is
+	signal s_totalGames : std_logic_vector(3 downto 0) := "0000";
+begin
+	s_totalGames <= std_logic_vector(unsigned('0' & countPlayerA) + unsigned('0' & countPlayerB) + 1);
+
+	process(enable, s_totalGames, countPlayerA, countPlayerB, breakPointMode)
+	begin
+		if (enable = '1') then
+			if (breakPointMode = '1') then
+				decOutB <= "0001100"; -- P
+				decOutA <= "0000111"; -- T
+				decOutTotal0 <= "1111111"; -- 0
+				decOutTotal1 <= "0000011"; --b
+			else
+				case s_totalGames is
+						when "0000"=> decOutTotal1 <="1000000"; decOutTotal0 <="1111111";  -- '0'
+						when "0001"=> decOutTotal1 <="1111001"; decOutTotal0 <="1111111";  -- '1'
+						when "0010"=> decOutTotal1 <="0100100"; decOutTotal0 <="1111111";  -- '2'
+						when "0011"=> decOutTotal1 <="0110000"; decOutTotal0 <="1111111";  -- '3'
+						when "0100"=> decOutTotal1 <="0011001"; decOutTotal0 <="1111111";  -- '4' 
+						when "0101"=> decOutTotal1 <="0010010"; decOutTotal0 <="1111111";  -- '5'
+						when "0110"=> decOutTotal1 <="0000010"; decOutTotal0 <="1111111";  -- '6'
+						when "0111"=> decOutTotal1 <="1111000"; decOutTotal0 <="1111111";  -- '7'
+						when "1000"=> decOutTotal1 <="0000000"; decOutTotal0 <="1111111";  -- '8'
+						when "1001"=> decOutTotal1 <="0010000"; decOutTotal0 <="1111111";  -- '9'
+						when "1010"=> decOutTotal0 <="1000000"; decOutTotal1 <="1111001";  -- '10'
+						when "1011"=> decOutTotal0 <="1111001"; decOutTotal1 <="1111001";  -- '11'
+						when "1100"=> decOutTotal0 <="0100100"; decOutTotal1 <="1111001";  -- '12'
+						when "1101"=> decOutTotal0 <="0110000"; decOutTotal1 <="1111001";  -- '13'
+						when "1110"=> decOutTotal0 <="0011001"; decOutTotal1 <="1111001";  -- '14'
+						when others=> decOutTotal0 <="1111111"; decOutTotal1 <="1111111";
+				end case;
+
+				case countPlayerA is
+					when "000"=> decOutA <="1000000";  -- '0'
+					when "001"=> decOutA <="1111001";  -- '1'
+					when "010"=> decOutA <="0100100";  -- '2'
+					when "011"=> decOutA <="0110000";  -- '3'
+					when "100"=> decOutA <="0011001";  -- '4' 
+					when "101"=> decOutA <="0010010";  -- '5'
+					when "110"=> decOutA <="0000010";  -- '6'
+					when "111"=> decOutA <="1111000";  -- '7'
+					when others=> decOutA <="1111111";
+				 end case;
+
+				 case countPlayerB is
+					when "000"=> decOutB <="1000000";  -- '0'
+					when "001"=> decOutB <="1111001";  -- '1'
+					when "010"=> decOutB <="0100100";  -- '2'
+					when "011"=> decOutB <="0110000";  -- '3'
+					when "100"=> decOutB <="0011001";  -- '4' 
+					when "101"=> decOutB <="0010010";  -- '5'
+					when "110"=> decOutB <="0000010";  -- '6'
+					when "111"=> decOutB <="1111000";  -- '7'
+					when others=> decOutB <="1111111";
+				 end case;
+			end if;
+		else
+			decOutTotal0 <= "1111111";
+			decOutTotal1 <= "1111111";
+			decOutA      <= "1111111";
+			decOutB      <= "1111111";
+		end if;
+	end process;
+end Behavioral;
